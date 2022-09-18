@@ -1,6 +1,7 @@
 import path from "path";
 import express from "express"
 
+import API from "./api/index.js";
 import { fileURLToPath } from 'url';
 import filesRoutes from "./sendFiles/index.js"
 
@@ -15,9 +16,7 @@ function bootstrap() {
 
     filesRoutes(app, express, __dirname)
 
-    app.get("/", (req, res) => {
-        res.render('pages/home', { port: PORT })
-    })
+    API(app)
 
     app.listen(PORT, () => {
         console.log("Start server on", PORT);

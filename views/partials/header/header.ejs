@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg bg-secondary fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button
+      class="btn d-lg-none"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasExample"
+      aria-controls="offcanvasExample"
+    >
+        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+        </svg>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <% routes.forEach(({ pathname, label }) => { %>
+        <li class="nav-item">
+            <a class="nav-link <%= pathname === pageId ? "active" : "router-no-active-link" %>" 
+                aria-current="page" href="<%= pathname %>">
+                <%= label %>
+            </a>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
+  </div>
+</nav>
