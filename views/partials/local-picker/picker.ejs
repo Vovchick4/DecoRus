@@ -1,0 +1,14 @@
+<div class="dropdown">
+  <button
+    class="btn btn-secondary dropdown-toggle"
+    type="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    <%= activeLng %>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="<%= "ua" + (pageId === "/" ? "" : pageId) %>">UA</a></li>
+    <li><a class="dropdown-item" href="<%= "en" + (pageId === "/" ? "" : pageId) %>">EN</a></li>
+  </ul>
+</div>
