@@ -7,6 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- BootstrapConnect -->
     <%- include('../partials/head/bootstrap'); %>
+
+    <style>
+      header {
+        min-height: 100vh;
+      }
+      .content_text {
+        width: 50%;
+      }
+      .main_image_cont_header {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        clip-path: ellipse(35% 80% at 35% 100%);
+        transform: rotate(220deg);
+      }
+    </style>
   </head>
 
   <body>
@@ -16,7 +32,19 @@
     <!-- OffCanvas -->
     <%- include('../partials/offcanvas/offcanvas'); %>
 
-    <p><%= t("title") %></p>
-    <p><%= pageId %></p>
+    <main>
+      <header class="d-flex align-items-center position-relative">
+        <div class="position-absolute bottom-0 end-0">
+          <%- include('../partials/svg/hero'); %>
+        </div>
+
+        <div class="container">
+          <h2 class="content_text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
+            obcaecati maxime tenetur dolorum, ducimus animi atque saepe
+          </h2>
+        </div>
+      </header>
+    </main>
   </body>
 </html>

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top">
-  <div class="container">
-    <a class="navbar-brand" href="#">Navbar</a>
+  <div class="container d-flex align-items-center">
+    <a class="navbar-brand fs-4" href="/">Decorus</a>
 
     <div class="d-flex d-lg-none">
       <%- include('../local-picker/picker'); %>
@@ -22,7 +22,7 @@
       <ul class="navbar-nav">
         <% routes.forEach(({ pathname, label }) => { %>
         <li class="nav-item">
-            <a class="nav-link <%= pathname === pageId ? "active" : "router-no-active-link" %>" 
+            <a class="nav-link <%= pathname === pageId ? "active text-decoration-underline" : "router-no-active-link" %>" 
                 aria-current="page" href="<%= pathname %>">
                 <%= label %>
             </a>
