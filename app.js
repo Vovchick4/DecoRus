@@ -5,6 +5,8 @@ import partials from "express-partials"
 import Backend from "i18next-node-fs-backend"
 import i18nextMiddleware from "i18next-http-middleware"
 
+import database from "./db/index.js"
+
 import API from "./api/index.js"
 import { fileURLToPath } from 'url'
 import filesRoutes from "./sendFiles/index.js"
@@ -43,30 +45,6 @@ function bootstrap() {
 
     app.use(i18nextMiddleware.handle(i18next, { removeLngFromUrl: false }));
 
-    // app.use(function (req, res, next) {
-    //     const ignoreKeys = ["/css/bootstarp.css", "/js/jquery.js", "/js/bootstrap.bundle.min.js"]
-    //     const match = req.url.match(/^\/([A-Z]{2})([\/\?].*)?$/i);
-
-    //     if (ignoreKeys.includes(req.url)) {
-    //         next()
-    //         return
-    //     }
-
-    //     if (match) {
-    //         req.url_lang = match[1];
-    //         req.url = match[2] || '/';
-    //     }
-
-    //     next();
-    // });
-
-    // app.use('/:locale', (req, res, next) => {
-    //     let activeLocale = req.body?.locale || "ua"
-    //     if (activeLocale)
-    //         req.i18n.changeLanguage(req.url_lang)
-    //     next();
-    // })
-
     API(app)
 
     app.listen(PORT, () => {
@@ -74,4 +52,4 @@ function bootstrap() {
     })
 }
 
-bootstrap()
+database(bootstrap)

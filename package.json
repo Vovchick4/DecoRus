@@ -5,7 +5,8 @@
   "description": "Decorus closesS",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon -e * start"
+    "start": "env-cmd -e development -r ./envs/cmrdc.json nodemon -e * start",
+    "start:prod": "env-cmd -e development,production -r ./envs/cmrdc.json nodemon -e * start"
   },
   "author": "Vova",
   "license": "ISC",
@@ -15,8 +16,10 @@
     "cors": "^2.8.5",
     "ejs": "^3.1.8",
     "ejs-webpack-loader": "^2.2.2",
+    "env-cmd": "^10.1.0",
     "express": "^4.18.1",
     "express-partials": "^0.3.0",
+    "gridfs-stream": "^1.1.1",
     "http-server": "^14.1.1",
     "i18next": "^21.9.2",
     "i18next-browser-languagedetector": "^6.1.5",
@@ -24,6 +27,11 @@
     "i18next-http-middleware": "^3.2.1",
     "i18next-node-fs-backend": "^2.1.3",
     "jquery": "^3.6.1",
+    "migrate-mongo": "^9.0.0",
+    "mongodb": "^4.10.0",
+    "mongoose": "^6.6.1",
+    "multer": "^1.4.5-lts.1",
+    "multer-gridfs-storage": "^5.0.2",
     "nodemon": "^2.0.20",
     "path": "^0.12.7"
   }
