@@ -1,0 +1,32 @@
+<!-- Vertically centered modal -->
+<div class="modal fade" id="<%= modalName %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="<%= modalName %>Label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Add new item</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="add-item-form" class="d-flex flex-column gap-4 needs-validation" novalidate>
+                    <% inputs.forEach(({ label, type, id, name, className, validMessage }, index)=> { %>
+                        <div class="d-flex align-items-center gap-3 input-group has-validation">
+                            <label class="form-label" for="<%= id %>">
+                                <%= label %>
+                            </label>
+                            <input htmlFor="<%= id %>" type="<%= type %>" id="<%= id %>" name="<%= name %>"
+                                class="<%= className %>" required>
+                            <div class="invalid-feedback">
+                                <%= validMessage %>
+                            </div>
+                        </div>
+                        <% }) %>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" form="add-item-form">Add</button>
+            </div>
+        </div>
+    </div>
+</div>

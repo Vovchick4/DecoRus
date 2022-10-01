@@ -1,8 +1,8 @@
-import { homeRouter, contactRouter, imageRouter } from "./routes/index.js";
+import { pagesRouter, collectionRouter, imageRouter, } from "./routes/index.js";
 
 const API = (app) => {
-    app.use("/", homeRouter);
-    app.use("/", contactRouter);
+    app.use("/", pagesRouter);
+    app.use("/api/collections", collectionRouter);
     app.use("/api/image", imageRouter);
 };
 

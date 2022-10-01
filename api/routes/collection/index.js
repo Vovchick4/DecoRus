@@ -3,6 +3,6 @@ import * as controller from "./controller.js"
 
 const router = express.Router()
 
-router.get("/contacts", controller.getContactPage)
+router.get("/", controller.getCollection)
 
 export default router

@@ -7,65 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- BootstrapConnect -->
     <%- include('../partials/head/bootstrap'); %>
-
-    <style>
-      .full_vh {
-        min-height: 100vh;
-      }
-      .title {
-        font-size: 3rem;
-      }
-      .content_text {
-        width: 50%;
-        text-align: center;
-      }
-      .header-preview_index {
-        inset: 0;
-        z-index: -1;
-      }
-      .main_image_cont_header {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .phone-size {
-        width: 340px;
-        height: 434px;
-        padding-right: 40px;
-      }
-      .ensuring_preview_image_content {
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-      }
-      .ensuring_preview_image_content_image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-      .overflow {
-        position: absolute;
-        inset: 0;
-        background-color: rgba(0, 0, 0, 0.83);
-      }
-      .art_section_media_query {
-        flex-basis: 50%;
-      }
-      @media screen and (max-width: 800px) {
-        .ensuring {
-          min-height: 100vh;
-        }
-        .art_section_media_query {
-          flex-basis: 100%;
-        }
-        .content_text {
-          width: 100%;
-        }
-        .header-preview_index {
-          z-index: -1;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./styles/css/home.css" />
+    <link rel="stylesheet" href="./styles/css/modal-slider.css" />
   </head>
 
   <body>
@@ -279,6 +222,33 @@
           </div>
         </div>
       </section>
+
+      <article class="container">
+        <p class="fs-2 text-center">Our Latest Work</p>
+
+        <div class="row row-cols-3 gy-4 py-2">
+          <% ourLatestWork.forEach(({ image }, index) => { %>
+          <div
+            class="col-12 col-md-6 col-lg-4 bs-modal-slider-data"
+            data-bs-toggle="modal"
+            data-bs-target="#imageSliderModal"
+            title="<%= index %>"
+          >
+            <img
+              style="object-fit: cover"
+              width="100%"
+              height="350"
+              src="<%= image %>"
+              alt="Image"
+            />
+          </div>
+          <% }) %>
+        </div>
+      </article>
     </main>
+
+    <%- include("../partials/modal-slider/modal-slider") %>
+    <script src="ejs.min.js"></script>
+    <script src="./scripts/js/modal-slider.js"></script>
   </body>
 </html>

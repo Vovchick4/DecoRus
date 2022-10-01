@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin panel Decorus Collections</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- BootstrapConnect -->
+    <%- include('../../partials/head/bootstrap'); %>
+        <link rel="stylesheet" href="./styles/css/admin-panel.css" />
+</head>
+
+<body>
+    <!-- AdminPanelAside -->
+    <%- include('../../partials/admin-sidebar/sidebar'); %>
+
+        <main class="admin-panel_content">
+            <div class="d-flex align-items-center justify-content-between px-5">
+                <h1>Collections</h1>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AddColl">
+                    Add new collection
+                </button>
+            </div>
+
+            <section class="px-5">
+                <% if (collections) { %>
+                    <table class="table table-dark table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Image</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% collections.forEach(({ title, image }, index)=> { %>
+                                <tr>
+                                    <th scope="row">
+                                        <%= index + 1 %>
+                                    </th>
+                                    <td>
+                                        <%= title %>
+                                    </td>
+                                    <td>
+                                        <%= title %>
+                                    </td>
+                                </tr>
+                                <% }) %>
+                        </tbody>
+                    </table>
+                    <% } else { %>
+                        <h5>No Coll</h5>
+                        <% } %>
+            </section>
+        </main>
+
+        <%- include("../../partials/Modal-Add-Item/modal", { modalName: "AddColl" , inputs: [{ label: "Title" ,
+            type: "text" , id: "validationDefault01" , name: "title" , className: "form-control" ,
+            validMessage: "Must be a title" }, { label: "Image" , type: "file" , id: "image" , name: "image" ,
+            className: "form-control" , validMessage: "Must be a image" }] }) %>
+
+            <script src="./scripts/js/collections.js"></script>
+</body>
+
+</html>
