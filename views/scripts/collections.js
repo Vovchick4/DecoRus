@@ -25,9 +25,9 @@
                     }
                 })
                 response.json().then(response => {
-                    const url = new URL(window.location);
-                    url.searchParams.set('foo', 'bar');
-                    window.history.pushState({}, '', url);
+                    const { title } = response.newCollection
+                    const { origin, pathname } = window.location
+                    window.location.href = origin + pathname + `?newColl=${title}`
                 }).catch(error => alert(error))
             }
 
