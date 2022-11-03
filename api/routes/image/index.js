@@ -9,18 +9,18 @@ const router = express.Router();
 
 // Route for creating image
 router.post(
-    '/create',
+    '/create/:collId',
     upload.single('file'),
-    controller.createImage
+    controller.uploadImageToCollection
 );
 
 // Route for removing image
 router.delete(
-    '/delete',
+    '/delete/:collId',
     controller.removeImage
 );
 
 // Route for receiving image
-router.get('/:imageName', controller.getImage);
+router.get('/:collId', controller.getImage);
 
 export default router;

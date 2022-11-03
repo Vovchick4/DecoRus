@@ -1,12 +1,20 @@
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
+    <div class="offcanvas-header bg-dark text-white" style="opacity: 0.95;">
         <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white text-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body">
-        <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists,
-            etc.
-        </div>
+    <div class="offcanvas-body bg-dark text-white" style="opacity: 0.95;">
+        <ul class="navbar-nav text-center">
+            <% routes.forEach(({ pathname, label })=> { %>
+                <li class="nav-item">
+                    <a class="nav-link <%= pathname === pageId ? " active text-decoration-underline"
+                        : "router-no-active-link" %>"
+                        aria-current="page" href="<%= pathname %>">
+                            <%= label %>
+                    </a>
+                </li>
+                <% }) %>
+        </ul>
     </div>
 </div>

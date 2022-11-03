@@ -1,3 +1,4 @@
+const titleModal = document.querySelector("#exampleModalLabel")
 const imageSlide = document.getElementsByClassName("bs-modal-slider-data")
 const modalBodyImageSlide = document.getElementById("modalBodyImageSlide")
 const modalSliderPreviewImage = document.getElementsByClassName("modal_slider_preview_image")[0]
@@ -21,6 +22,7 @@ for (const key in imageSlide) {
                 modalSliderBtnNext.classList.remove("disabled")
             }
             modalBodyImageSlide.childNodes.item(3).src = imageSlide[index].children[0].src // e.target.src 
+            titleModal.innerHTML = imageSlide[index].children[0].alt
         })
     }
 }
@@ -34,6 +36,7 @@ modalSliderBtnPrev.addEventListener("click", (e) => {
     }, 150)
     --index
     modalBodyImageSlide.childNodes.item(3).src = imageSlide[index].children[0].src
+    titleModal.innerHTML = imageSlide[index].children[0].alt
     if (index <= 0) {
         modalSliderBtnPrev.classList.add("disabled")
     }
@@ -49,6 +52,7 @@ modalSliderBtnNext.addEventListener("click", (e) => {
 
     ++index
     modalBodyImageSlide.childNodes.item(3).src = imageSlide[index].children[0].src
+    titleModal.innerHTML = imageSlide[index].children[0].alt
     if (index >= imageSlide.length - 1) {
         modalSliderBtnNext.classList.add("disabled")
     }

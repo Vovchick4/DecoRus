@@ -6,7 +6,7 @@ import { gridFSBucketService } from '../../../shared/services/grid-fs-bucket.js'
 // Handler for server error
 import resServerError from '../../../shared/utils/response-server-error.js';
 
-export const createImage = async (req, res) => {
+export const uploadImageToCollection = async (req, res) => {
     try {
         const newImage = req.file
 
@@ -16,8 +16,18 @@ export const createImage = async (req, res) => {
             });
             return
         }
-        const imgUrl = `/api/image/${newImage.filename.split(" ").join("").lowerCase()}`
+        const imgUrl = `/api/image/${newImage.originalname}`
+
+        const coll = await Collection.findByIdAndUpdate(
+            req.params.collId,
+            {
+                image: { filename: imgUrl }
+            },
+            { new: true }
+        );
+
         res.status(201).json({
+            coll,
             imgUrl
         });
     } catch (e) {
@@ -42,7 +52,7 @@ export const removeImage = async (req, res) => {
 
 export const getImage = async (req, res) => {
     try {
-        gridFSBucketService.gfs.find({ filename: new RegExp(req.params.imageName, 'i') })
+        gridFSBucketService.gfs.find({ filename: new RegExp(req.params.collId, 'i') })
             .toArray((err, files) => {
                 if (!files || files.length === 0) {
                     return res.status(404).json({

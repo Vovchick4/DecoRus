@@ -47,13 +47,15 @@
   cursor: pointer;
   filter: brightness(38%);
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .ensuring {
     min-height: 100vh;
   }
   .art_section_media_query {
     flex-basis: 100%;
   }
+}
+@media screen and (max-width: 800px) {
   .content_text {
     width: 100%;
   }

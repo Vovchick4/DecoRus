@@ -1,254 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- BootstrapConnect -->
-    <%- include('../partials/head/bootstrap'); %>
+
+<head>
+  <title>Home</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- BootstrapConnect -->
+  <%- include('../partials/head/bootstrap'); %>
     <link rel="stylesheet" href="./styles/css/home.css" />
     <link rel="stylesheet" href="./styles/css/modal-slider.css" />
-  </head>
+</head>
 
-  <body>
+<body>
+  <div class="d-flex flex-column" style="min-height: 100vh;">
     <!-- NavBar -->
     <%- include('../partials/header/header'); %>
 
-    <!-- OffCanvas -->
-    <%- include('../partials/offcanvas/offcanvas'); %>
+      <!-- OffCanvas -->
+      <%- include('../partials/offcanvas/offcanvas'); %>
 
-    <main>
-      <header class="full_vh d-flex align-items-center position-relative">
-        <div class="position-absolute header-preview_index">
-          <img
-            class="main_image_cont_header"
-            src="<%= base_url %>/local/images/dddd-min.jpg"
-            alt="Home"
-          />
-        </div>
+        <main>
+          <header class="full_vh d-flex align-items-center position-relative">
+            <div class="position-absolute header-preview_index">
+              <img class="main_image_cont_header" src="<%= base_url %>/local/images/dddd-min.jpg" alt="Home" />
+            </div>
 
-        <div class="container">
-          <div class="d-flex flex-column align-items-end">
-            <div class="content_text">
-              <p class="fs-5">Our services</p>
-              <h1 class="title">DECORUS</h1>
-              <div
-                class="d-flex align-items-center justify-content-center gap-3 text-uppercase mt-4"
-              >
-                <button
-                  type="button"
-                  class="btn btn-outline-dark fs-5 text-uppercase"
-                >
-                  About US
-                </button>
-                <p class="m-0 p-0 fs-5 text-uppercase">OR</p>
-                <button
-                  type="button"
-                  class="btn btn-outline-dark fs-5 text-uppercase"
-                >
-                  CONTACTS
-                </button>
+            <div class="container">
+              <div class="d-flex flex-column align-items-end">
+                <div class="content_text">
+                  <p class="fs-5">Our services</p>
+                  <h1 class="title">DECORUS</h1>
+                  <div class="d-flex align-items-center justify-content-center gap-3 text-uppercase mt-4">
+                    <button type="button" class="btn btn-outline-dark fs-5 text-uppercase">
+                      About US
+                    </button>
+                    <p class="m-0 p-0 fs-5 text-uppercase">OR</p>
+                    <button type="button" class="btn btn-outline-dark fs-5 text-uppercase">
+                      CONTACTS
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      </header>
+          </header>
 
-      <section class="container py-5 px-5">
-        <h2 class="fs-2 text-center text-uppercase pb-4">
-          We help and solve your business problem
-        </h2>
-        <div class="d-flex gap-4 flex-column flex-md-row mt-4">
-          <div>
-            <div class="text-center mb-2">
-              <svg
-                style="width: 34px; height: 34px"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi bi-sd-card"
-                viewBox="0 0 43 43"
-              >
-                <path
-                  d="M6.25 3.5a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2z"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M5.914 0H12.5A1.5 1.5 0 0 1 14 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5V3.914c0-.398.158-.78.44-1.06L4.853.439A1.5 1.5 0 0 1 5.914 0zM13 1.5a.5.5 0 0 0-.5-.5H5.914a.5.5 0 0 0-.353.146L3.146 3.561A.5.5 0 0 0 3 3.914V14.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-13z"
-                />
-              </svg>
+          <section class="container py-5 px-5">
+            <h2 class="fs-2 text-center text-uppercase pb-4">
+              We help and solve your business problem
+            </h2>
+            <div class="d-flex gap-4 flex-column flex-md-row mt-4">
+              <div>
+                <div class="text-center mb-2">
+                  <svg style="width: 34px; height: 34px" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    class="bi bi-sd-card" viewBox="0 0 43 43">
+                    <path
+                      d="M6.25 3.5a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2z" />
+                    <path fill-rule="evenodd"
+                      d="M5.914 0H12.5A1.5 1.5 0 0 1 14 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5V3.914c0-.398.158-.78.44-1.06L4.853.439A1.5 1.5 0 0 1 5.914 0zM13 1.5a.5.5 0 0 0-.5-.5H5.914a.5.5 0 0 0-.353.146L3.146 3.561A.5.5 0 0 0 3 3.914V14.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-13z" />
+                  </svg>
+                </div>
+                <p class="text-center fw-bolder">UNLIMITED STORAGE</p>
+                <p class="text-center fw-lighter">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam
+                  nunc justo sagittis suscipit ultrices.
+                </p>
+              </div>
+              <div>
+                <div class="text-center mb-2">
+                  <svg style="width: 34px; height: 34px" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    class="bi bi-sd-card" viewBox="0 0 43 43">
+                    <path
+                      d="M6.25 3.5a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2z" />
+                    <path fill-rule="evenodd"
+                      d="M5.914 0H12.5A1.5 1.5 0 0 1 14 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5V3.914c0-.398.158-.78.44-1.06L4.853.439A1.5 1.5 0 0 1 5.914 0zM13 1.5a.5.5 0 0 0-.5-.5H5.914a.5.5 0 0 0-.353.146L3.146 3.561A.5.5 0 0 0 3 3.914V14.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-13z" />
+                  </svg>
+                </div>
+                <p class="text-center fw-bolder">UNLIMITED STORAGE</p>
+                <p class="text-center fw-lighter">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam
+                  nunc justo sagittis suscipit ultrices.
+                </p>
+              </div>
+              <div>
+                <div class="text-center mb-2">
+                  <svg style="width: 34px; height: 34px" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                    class="bi bi-sd-card" viewBox="0 0 43 43">
+                    <path
+                      d="M6.25 3.5a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2z" />
+                    <path fill-rule="evenodd"
+                      d="M5.914 0H12.5A1.5 1.5 0 0 1 14 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5V3.914c0-.398.158-.78.44-1.06L4.853.439A1.5 1.5 0 0 1 5.914 0zM13 1.5a.5.5 0 0 0-.5-.5H5.914a.5.5 0 0 0-.353.146L3.146 3.561A.5.5 0 0 0 3 3.914V14.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-13z" />
+                  </svg>
+                </div>
+                <p class="text-center fw-bolder">UNLIMITED STORAGE</p>
+                <p class="text-center fw-lighter">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam
+                  nunc justo sagittis suscipit ultrices.
+                </p>
+              </div>
             </div>
-            <p class="text-center fw-bolder">UNLIMITED STORAGE</p>
-            <p class="text-center fw-lighter">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam
-              nunc justo sagittis suscipit ultrices.
-            </p>
-          </div>
-          <div>
-            <div class="text-center mb-2">
-              <svg
-                style="width: 34px; height: 34px"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi bi-sd-card"
-                viewBox="0 0 43 43"
-              >
-                <path
-                  d="M6.25 3.5a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2z"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M5.914 0H12.5A1.5 1.5 0 0 1 14 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5V3.914c0-.398.158-.78.44-1.06L4.853.439A1.5 1.5 0 0 1 5.914 0zM13 1.5a.5.5 0 0 0-.5-.5H5.914a.5.5 0 0 0-.353.146L3.146 3.561A.5.5 0 0 0 3 3.914V14.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-13z"
-                />
-              </svg>
+            <div class="d-flex align-items-center justify-content-center pt-4">
+              <button type="button" class="btn btn-outline-dark fs-5 text-uppercase">
+                about us
+              </button>
             </div>
-            <p class="text-center fw-bolder">UNLIMITED STORAGE</p>
-            <p class="text-center fw-lighter">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam
-              nunc justo sagittis suscipit ultrices.
-            </p>
-          </div>
-          <div>
-            <div class="text-center mb-2">
-              <svg
-                style="width: 34px; height: 34px"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="bi bi-sd-card"
-                viewBox="0 0 43 43"
-              >
-                <path
-                  d="M6.25 3.5a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2zm2 0a.75.75 0 0 0-1.5 0v2a.75.75 0 0 0 1.5 0v-2z"
-                />
-                <path
-                  fill-rule="evenodd"
-                  d="M5.914 0H12.5A1.5 1.5 0 0 1 14 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5V3.914c0-.398.158-.78.44-1.06L4.853.439A1.5 1.5 0 0 1 5.914 0zM13 1.5a.5.5 0 0 0-.5-.5H5.914a.5.5 0 0 0-.353.146L3.146 3.561A.5.5 0 0 0 3 3.914V14.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-13z"
-                />
-              </svg>
+          </section>
+
+          <section class="full_vh d-flex flex-wrap">
+            <div class="d-flex flex-column align-items-center justify-content-center px-5 py-5 art_section_media_query">
+              <h3>We focus on ensuring a competitive edge</h3>
+              <div class="d-flex align-items-center justify-content-center phone-size">
+                <img width="100%" height="100%" src="<%= base_url %>/local/images/phone-2.png" alt="Image" />
+              </div>
             </div>
-            <p class="text-center fw-bolder">UNLIMITED STORAGE</p>
-            <p class="text-center fw-lighter">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam
-              nunc justo sagittis suscipit ultrices.
-            </p>
-          </div>
-        </div>
-        <div class="d-flex align-items-center justify-content-center pt-4">
-          <button
-            type="button"
-            class="btn btn-outline-dark fs-5 text-uppercase"
-          >
-            about us
-          </button>
-        </div>
-      </section>
+            <div
+              class="position-relative d-flex align-items-center justify-content-center ensuring art_section_media_query">
+              <div class="ensuring_preview_image_content">
+                <div class="overflow"></div>
+                <img class="ensuring_preview_image_content_image"
+                  src="<%= base_url %>/local/images/pexels-photo-2050137.jpeg" alt="Preview Image" />
+              </div>
 
-      <section class="full_vh d-flex flex-wrap">
-        <div
-          class="d-flex flex-column align-items-center justify-content-center px-5 py-5 art_section_media_query"
-        >
-          <h3>We focus on ensuring a competitive edge</h3>
-          <div
-            class="d-flex align-items-center justify-content-center phone-size"
-          >
-            <img
-              width="100%"
-              height="100%"
-              src="<%= base_url %>/local/images/phone-2.png"
-              alt="Image"
-            />
-          </div>
-        </div>
-        <div
-          class="position-relative d-flex align-items-center justify-content-center ensuring art_section_media_query"
-        >
-          <div class="ensuring_preview_image_content">
-            <div class="overflow"></div>
-            <img
-              class="ensuring_preview_image_content_image"
-              src="<%= base_url %>/local/images/pexels-photo-2050137.jpeg"
-              alt="Preview Image"
-            />
-          </div>
-
-          <h4 class="text-white text-center px-2">
-            Article evident arrived express highest men did boy. Mistress
-            sensible entirely am so. Quick can manor smart money hopes worth
-            too. Comfort produce husband boy her had hearing. Law others theirs
-            passed but wishes. You day real less till dear read. Considered use
-            dispatched melancholy sympathize discretion led.
-          </h4>
-        </div>
-      </section>
-
-      <section class="px-5 py-5">
-        <h2 class="text-center mb-5">Our Services</h2>
-        <div class="d-flex flex-column flex-md-row gap-4 px-5 mt-5">
-          <div>
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="" alt="Photo" />
+              <h4 class="text-white text-center px-2">
+                Article evident arrived express highest men did boy. Mistress
+                sensible entirely am so. Quick can manor smart money hopes worth
+                too. Comfort produce husband boy her had hearing. Law others theirs
+                passed but wishes. You day real less till dear read. Considered use
+                dispatched melancholy sympathize discretion led.
+              </h4>
             </div>
-            <p class="fs-2 fw-bolder text-center">Sample</p>
-            <p class="text-center text-muted">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-              deleniti unde rerum, eius enim rem animi ut eveniet? Quas aliquid
-              omnis quasi earum reiciendis? Perferendis repudiandae fugiat
-              tempora laudantium quam.
-            </p>
-          </div>
-          <div>
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="" alt="Photo" />
+          </section>
+
+          <section class="px-5 py-5">
+            <h2 class="text-center mb-5">Our Services</h2>
+            <div class="d-flex flex-column flex-md-row gap-4 px-5 mt-5">
+              <div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <img src="" alt="Photo" />
+                </div>
+                <p class="fs-2 fw-bolder text-center">Sample</p>
+                <p class="text-center text-muted">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                  deleniti unde rerum, eius enim rem animi ut eveniet? Quas aliquid
+                  omnis quasi earum reiciendis? Perferendis repudiandae fugiat
+                  tempora laudantium quam.
+                </p>
+              </div>
+              <div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <img src="" alt="Photo" />
+                </div>
+                <p class="fs-2 fw-bolder text-center">Sample</p>
+                <p class="text-center text-muted">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                  deleniti unde rerum, eius enim rem animi ut eveniet? Quas aliquid
+                  omnis quasi earum reiciendis? Perferendis repudiandae fugiat
+                  tempora laudantium quam.
+                </p>
+              </div>
+              <div>
+                <div class="d-flex align-items-center justify-content-center">
+                  <img src="" alt="Photo" />
+                </div>
+                <p class="fs-2 fw-bolder text-center">Sample</p>
+                <p class="text-center text-muted">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
+                  deleniti unde rerum, eius enim rem animi ut eveniet? Quas aliquid
+                  omnis quasi earum reiciendis? Perferendis repudiandae fugiat
+                  tempora laudantium quam.
+                </p>
+              </div>
             </div>
-            <p class="fs-2 fw-bolder text-center">Sample</p>
-            <p class="text-center text-muted">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-              deleniti unde rerum, eius enim rem animi ut eveniet? Quas aliquid
-              omnis quasi earum reiciendis? Perferendis repudiandae fugiat
-              tempora laudantium quam.
-            </p>
-          </div>
-          <div>
-            <div class="d-flex align-items-center justify-content-center">
-              <img src="" alt="Photo" />
+          </section>
+
+          <article class="container">
+            <p class="fs-2 text-center">Our Latest Work</p>
+
+            <div class="row row-cols-3 gy-4 py-2">
+              <% ourLatestWork.forEach(({ title, image: { filename } }, index)=> { %>
+                <div class="col-12 col-md-6 col-lg-4 bs-modal-slider-data" data-bs-toggle="modal"
+                  data-bs-target="#imageSliderModal" title="<%= index %>">
+                  <img style="object-fit: cover" width="100%" height="350" src="<%= filename %>" alt="<%= title %> " />
+                </div>
+                <% }) %>
             </div>
-            <p class="fs-2 fw-bolder text-center">Sample</p>
-            <p class="text-center text-muted">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem
-              deleniti unde rerum, eius enim rem animi ut eveniet? Quas aliquid
-              omnis quasi earum reiciendis? Perferendis repudiandae fugiat
-              tempora laudantium quam.
-            </p>
-          </div>
-        </div>
-      </section>
+          </article>
+        </main>
 
-      <article class="container">
-        <p class="fs-2 text-center">Our Latest Work</p>
+        <%- include('../partials/footer/footer'); %>
 
-        <div class="row row-cols-3 gy-4 py-2">
-          <% ourLatestWork.forEach(({ image }, index) => { %>
-          <div
-            class="col-12 col-md-6 col-lg-4 bs-modal-slider-data"
-            data-bs-toggle="modal"
-            data-bs-target="#imageSliderModal"
-            title="<%= index %>"
-          >
-            <img
-              style="object-fit: cover"
-              width="100%"
-              height="350"
-              src="<%= image %>"
-              alt="Image"
-            />
-          </div>
-          <% }) %>
-        </div>
-      </article>
-    </main>
+          <%- include("../partials/modal-slider/modal-slider") %>
+  </div>
+  <script src="ejs.min.js"></script>
+  <script src="./scripts/js/modal-slider.js"></script>
+</body>
 
-    <%- include("../partials/modal-slider/modal-slider") %>
-    <script src="ejs.min.js"></script>
-    <script src="./scripts/js/modal-slider.js"></script>
-  </body>
 </html>

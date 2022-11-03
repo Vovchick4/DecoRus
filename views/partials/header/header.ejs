@@ -4,34 +4,34 @@
 
     <div class="d-flex d-lg-none">
       <%- include('../local-picker/picker'); %>
-      
-      <button
-      class="btn"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasExample"
-      aria-controls="offcanvasExample"
-    >
-        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-        </svg>
-    </button>
+
+        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+          </svg>
+        </button>
     </div>
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <% routes.forEach(({ pathname, label }) => { %>
-        <li class="nav-item">
-            <a class="nav-link <%= pathname === pageId ? "active text-decoration-underline" : "router-no-active-link" %>" 
-                aria-current="page" href="<%= pathname %>">
+        <% routes.forEach(({ pathname, label })=> { %>
+          <li class="nav-item">
+            <a class="nav-link <%= pathname === pageId ? " active text-decoration-underline" : "router-no-active-link"
+              %>"
+              aria-current="page" href="<%= pathname %>">
                 <%= label %>
             </a>
-        </li>
-        <% }) %>
+          </li>
+          <% }) %>
       </ul>
     </div>
 
-    <div class="d-none d-lg-block d-xl-block d-xxl-block"><%- include('../local-picker/picker'); %></div>
+    <div class="d-none d-lg-block d-xl-block d-xxl-block">
+      <%- include('../local-picker/picker'); %>
+    </div>
 
   </div>
 </nav>

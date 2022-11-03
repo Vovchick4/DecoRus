@@ -1,6 +1,6 @@
 <!-- Vertically centered modal -->
-<div class="modal fade" id="<%= modalName %>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="<%= modalName %>Label" aria-hidden="true">
+<div class="modal fade" id="<%= modalName %>" data-type-modal="ADD_COLL" data-bs-backdrop="static"
+    data-bs-keyboard="false" tabindex="-1" aria-labelledby="<%= modalName %>Label" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -9,23 +9,54 @@
             </div>
             <div class="modal-body">
                 <form id="add-item-form" class="d-flex flex-column gap-4 needs-validation" novalidate>
-                    <% inputs.forEach(({ label, type, id, name, className, validMessage }, index)=> { %>
+                    <% inputs.forEach(({ label, type, id, name, className, validMessage}, index)=> { %>
                         <div class="d-flex align-items-center gap-3 input-group has-validation">
                             <label class="form-label" for="<%= id %>">
                                 <%= label %>
                             </label>
                             <input htmlFor="<%= id %>" type="<%= type %>" id="<%= id %>" name="<%= name %>"
-                                class="<%= className %>" required>
+                                class="<%= className %>" required />
                             <div class="invalid-feedback">
                                 <%= validMessage %>
                             </div>
                         </div>
                         <% }) %>
+
+                            <div class="d-flex align-items-center gap-3 input-group has-validation">
+                                <label class="form-label" for="Photo">
+                                    Image
+                                </label>
+                                <input htmlFor="Photo" type="file" id="moda_add_coll_file" name="file" />
+                            </div>
+
+                            <div class="modal_file_changer-content">
+                                <div class="d-flex justify-content-between">
+                                    <div></div>
+                                    <button type="button" class="btn modalFileChangerRemoveBtn">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"
+                                            fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                            <path
+                                                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                                        </svg>
+                                    </button>
+                                </div>
+
+                                <div class="d-flex flex-column align-items-center justify-content-center">
+                                    <div class="Modal_Add_Image_File">
+                                        <img id="modal_add_img-source" width="100%" height="100%" src=""
+                                            alt="FileImage">
+                                    </div>
+                                </div>
+                            </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary" form="add-item-form">Add</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                </button>
+                <button type="submit" class="btn btn-primary" form="add-item-form">
+                    Add
+                </button>
             </div>
         </div>
     </div>
