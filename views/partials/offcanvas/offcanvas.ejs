@@ -5,11 +5,11 @@
             aria-label="Close"></button>
     </div>
     <div class="offcanvas-body bg-dark text-white" style="opacity: 0.95;">
-        <ul class="navbar-nav text-center">
+        <ul class="list-group" style="list-style: none;">
             <% routes.forEach(({ pathname, label })=> { %>
-                <li class="nav-item">
-                    <a class="nav-link <%= pathname === pageId ? " active text-decoration-underline"
-                        : "router-no-active-link" %>"
+                <li class="offcanvs-nav_link">
+                    <a class="list-group-item list-group-item-action
+                     text-dark <%= pathname === pageId ? " active text-white" : "router-no-active-link" %>"
                         aria-current="page" href="<%= pathname %>">
                             <%= label %>
                     </a>

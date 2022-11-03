@@ -1,0 +1,16 @@
+.header-nav_link:first-child {
+  border-top-left-radius: 50rem !important;
+  border-bottom-left-radius: 50rem !important;
+}
+.header-nav_link:last-child {
+  border-top-right-radius: 50rem !important;
+  border-bottom-right-radius: 50rem !important;
+}
+.offcanvs-nav_link:first-child {
+  border-top-left-radius: 50rem !important;
+  border-top-right-radius: 50rem !important;
+}
+.offcanvs-nav_link:last-child {
+  border-bottom-left-radius: 50rem !important;
+  border-bottom-right-radius: 50rem !important;
+}

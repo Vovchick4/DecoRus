@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-lg bg-secondary fixed-top">
   <div class="container d-flex align-items-center">
-    <a class="navbar-brand fs-4" href="/">Decorus</a>
+    <a class="navbar-brand fs-3 text-white fw-bolder" href="/">Decorus</a>
 
     <div class="d-flex d-lg-none">
       <%- include('../local-picker/picker'); %>
 
-        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+        <button class="btn text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
           aria-controls="offcanvasExample">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list"
             viewBox="0 0 16 16">
@@ -16,11 +16,11 @@
     </div>
 
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="list-group list-group-horizontal" style="list-style: none;">
         <% routes.forEach(({ pathname, label })=> { %>
-          <li class="nav-item">
-            <a class="nav-link <%= pathname === pageId ? " active text-decoration-underline" : "router-no-active-link"
-              %>"
+          <li class="header-nav_link">
+            <a class="list-group-item list-group-item-action
+             text-dark <%= pathname === pageId ? " active text-white" : "router-no-active-link" %>"
               aria-current="page" href="<%= pathname %>">
                 <%= label %>
             </a>
