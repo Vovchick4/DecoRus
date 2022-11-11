@@ -30,7 +30,7 @@ const modalAddImg = document.querySelector("#modal_add_img-source");
 
                 let response = null;
                 if (MODAL_STATE.addColl === addCollModalType.getAttribute("data-type-modal")) {
-                    response = await fetch("api/collections/create", {
+                    response = await fetch(`${window.origin}/api/collections/create`, {
                         body: JSON.stringify(dataInputs), method: 'POST', credentials: 'include', headers: {
                             'Accept': 'application/json',
                             'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ const modalAddImg = document.querySelector("#modal_add_img-source");
                     if (spliteImgSource[spliteImgSource.length - 1] === "none") {
                         dataInputs["image"] = { filename: "" }
                     }
-                    response = await fetch(`api/collections/update/${currentCollIdActive}`, {
+                    response = await fetch(`${window.origin}/api/collections/update/${currentCollIdActive}`, {
                         body: JSON.stringify(dataInputs), method: 'PATCH', credentials: 'include', headers: {
                             'Accept': 'application/json',
                             'Content-Type': 'application/json'
@@ -54,7 +54,7 @@ const modalAddImg = document.querySelector("#modal_add_img-source");
                     const { _id: _collId, title } = response.collection || response.newCollection
                     // If we have image upload this image
                     if (formData.has("file")) {
-                        await fetch(`api/image/create/${_collId}`, { body: formData, method: "POST", credentials: 'include' })
+                        await fetch(`${window.origin}/api/image/create/${_collId}`, { body: formData, method: "POST", credentials: 'include' })
                             .then(res => {
                                 // console.log(res);
                             })
@@ -92,7 +92,7 @@ addCollBtn.addEventListener("click", (e) => {
 updateCollectionBtn.forEach(btn => {
     btn.addEventListener("click", (e) => {
         const getCollIdByClick = btn.getAttribute("coll-data-req")
-        fetch(`api/collections/${getCollIdByClick}`)
+        fetch(`${window.origin}/api/collections/${getCollIdByClick}`)
             .then(async res => {
                 const { collection } = await res.json(res => res)
                 currentCollIdActive = collection._id
@@ -142,7 +142,7 @@ updateCollectionBtn.forEach(btn => {
 removeCollectionsBtn.forEach(removeBtn => {
     removeBtn.addEventListener("click", (e) => {
         const getCollIdByClick = removeBtn.getAttribute("coll-data-req")
-        fetch(`api/collections/delete/${getCollIdByClick}`, { method: "DELETE", credentials: 'include' })
+        fetch(`${window.origin}/api/collections/delete/${getCollIdByClick}`, { method: "DELETE", credentials: 'include' })
             .then(res => (window.location.reload()))
             .catch(err => alert(err))
     })

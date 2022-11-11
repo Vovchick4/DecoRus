@@ -28,11 +28,15 @@ export const getContactPage = (req, res) => {
 }
 
 export const getAdminPanelPage = (req, res) => {
-    res.render('pages/admin/admin-panel', { routes: routes.admin, pageId: req.url.split("?")[0], full_url: req.url_lang, base_url: process.env.BASE_URL })
+    res.render('pages/admin/admin-panel', { routes: routes.admin, pageId: req.url.split("?")[0], full_url: req.url_lang, base_url: process.env.BASE_URL, user: req.user })
 }
 
 export const getCollectionsPage = async (req, res) => {
     const response = await fetch(`${process.env.BASE_URL}/api/collections`)
     const { collections } = await response.json()
-    res.render('pages/admin/collections', { routes: routes.admin, pageId: req.url.split("?")[0], full_url: req.url_lang, base_url: process.env.BASE_URL, collections })
+    res.render('pages/admin/collections', { routes: routes.admin, pageId: req.url.split("?")[0], full_url: req.url_lang, base_url: process.env.BASE_URL, collections, user: req.user })
+}
+
+export const getLogInsPage = async (req, res) => {
+    res.render('pages/admin/log-in', { base_url: process.env.BASE_URL })
 }

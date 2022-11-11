@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LogIn</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BootstrapConnect -->
+    <%- include('../../partials/head/bootstrap'); %>
+</head>
+
+<body style="overflow: hidden;">
+
+    <!-- Flexbox container for aligning the toasts -->
+    <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center mt-2 w-100">
+
+        <!-- Then put toasts within -->
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Bootstrap</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Hello, world! This is a toast message.
+            </div>
+        </div>
+    </div>
+
+    <section class="d-flex align-items-center justify-content-center position-relative"
+        style="min-height: 100vh; width: 100%;">
+        <form class="needs-validation" style="max-width: 438px; width: 100%;" novalidate>
+            <fieldset>
+                <legend class="text-center">Decorus Admin Page (Main)</legend>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email input</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Your Email"
+                        autocomplete="email" required>
+                    <div class="invalid-feedback">
+                        Please input your email
+                    </div>
+                    <div class="valid-feedback">
+                        Correct user email
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password input</label>
+                    <input type="password" id="password" name="password" class="form-control"
+                        placeholder="Your Password" autocomplete="current-password" required>
+                </div>
+                <div class="mb-3">
+                    <label for="cbf-password" class="form-label">Confirm your password</label>
+                    <input type="password" id="cbf-password" name="cbf-password" class="form-control"
+                        placeholder="Your Password" autocomplete="current-password" required>
+                    <div class="check_password d-none text-danger">
+                        Password(s) must matches!
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+
+    <script type="module" src="<%= base_url %>/scripts/js/log-in.js"></script>
+    <script type="module" src="<%= base_url %>/scripts/js/user-service._module.js"></script>
+</body>
+
+</html>

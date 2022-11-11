@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- BootstrapConnect -->
     <%- include('../../partials/head/bootstrap'); %>
-        <link rel="stylesheet" href="./styles/css/admin-panel.css" />
+        <link rel="stylesheet" href="<%= base_url %>/styles/css/admin-panel.css" />
 </head>
 
 <body>
@@ -85,7 +85,9 @@
             type: "text" , id: "title" , name: "title" , className: "form-control" , validMessage: "Must be a title" }]
             }) %>
 
-            <script src="./scripts/js/collections.js"></script>
+            <script src="<%= base_url %>/scripts/js/collections.js"></script>
+            <script type="module" src="<%= base_url %>/scripts/js/admin.js"></script>
+            <script type="module" src="<%= base_url %>/scripts/js/user-service._module.js"></script>
 </body>
 
 </html>

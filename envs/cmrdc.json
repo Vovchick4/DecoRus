@@ -6,8 +6,10 @@
     "MONGO_URL": "mongodb://127.0.0.1:27017/",
     "MONGO_DB": "decorus-db",
     "ACCESS_TOKEN": "jsjgosfdjogioaqOSSAJohhohdgdoghoo",
-    "ACCESS_TOKEN_EXPIRES": 8343,
-    "TELEGRAM_BOT_TOKEN_UNIQ": "5442420039:AAE-4mNFju_FWS1T-HmolMWvRpO3_VEkHFU"
+    "ACCESS_TOKEN_EXPIRES": 604800,
+    "TELEGRAM_BOT_TOKEN_UNIQ": "5442420039:AAE-4mNFju_FWS1T-HmolMWvRpO3_VEkHFU",
+    "MONGO_ADMIN": "ch.testadmin@gmail.decorus.com",
+    "MONGO_ADMIN_PASS": "sdkhas"
   },
   "production": {
     "NODE_ENV": "production",

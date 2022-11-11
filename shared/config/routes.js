@@ -14,7 +14,7 @@ const routes = {
             label: "Admin Panel"
         },
         {
-            pathname: "/collections",
+            pathname: "/admin-panel-page/collections",
             label: "Collections"
         }]
 }

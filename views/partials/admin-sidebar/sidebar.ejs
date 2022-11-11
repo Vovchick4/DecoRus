@@ -1,28 +1,41 @@
-<aside class="admin-panel_aside">
-    <div class="d-flex align-items-center gap-4 border-bottom mb-4 pb-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-1-circle"
-            viewBox="0 0 16 16">
-            <path
-                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383h1.312Z" />
-        </svg>
-        <p class="m-0 p-0 fs-4 fw-bold">Decorus</p>
+<aside class="admin-panel_aside d-flex flex-column justify-content-between">
+    <div>
+        <div class="d-flex align-items-center gap-4 border-bottom mb-4 pb-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-1-circle"
+                viewBox="0 0 16 16">
+                <path
+                    d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8Zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0ZM9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383h1.312Z" />
+            </svg>
+            <p class="m-0 p-0 fs-4 fw-bold">Decorus</p>
+        </div>
+
+        <ul class="admin-panel_aside_content_links" style="list-style: none; margin: 0; padding: 0;">
+            <% routes.forEach(({ pathname, label })=> { %>
+                <li>
+                    <a class="admin-panel_aside_link <%= pathname === pageId ? " active" : "router-no-active-link" %>"
+                        href="<%= pathname %>">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                class="bi bi-speedometer2" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z" />
+                                <path fill-rule="evenodd"
+                                    d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z" />
+                            </svg>
+                            <span>
+                                <%= label %>
+                            </span>
+                    </a>
+                </li>
+                <% }) %>
+        </ul>
     </div>
 
-    <div class="admin-panel_aside_content_links">
-        <% routes.forEach(({ pathname, label })=> { %>
-            <a class="admin-panel_aside_link <%= pathname === pageId ? " active" : "router-no-active-link" %>" href="<%=
-                    pathname %>">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
-                        class="bi bi-speedometer2" viewBox="0 0 16 16">
-                        <path
-                            d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z" />
-                        <path fill-rule="evenodd"
-                            d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z" />
-                    </svg>
-                    <span>
-                        <%= label %>
-                    </span>
-            </a>
-            <% }) %>
+    <div class="d-flex flex-column align-items-center gap-3 border-top pt-4">
+        <img width="43" height="43" src="<%= base_url %>/local/images/User-avatar.svg.png" alt="UserAvatar">
+        <p class="m-0" style="max-width: 120px; overflow: hidden;  white-space: nowrap; text-overflow: ellipsis;"
+            title="<%= user.email %> ">
+            <%= user.email %>
+        </p>
+        <button type="button" class="btn btn-outline-primary log-out-btn">LogOut</button>
     </div>
 </aside>
