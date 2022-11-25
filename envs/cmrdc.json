@@ -14,7 +14,7 @@
   "production": {
     "NODE_ENV": "production",
     "NODE_OPTIONS": "--http-parser=legacy",
-    "BASE_URL": "http://aed-map.pp.ua",
+    "BASE_URL": "https://decorus.azurewebsites.net",
     "MONGO_DB": "decorusdb",
     "MONGO_URL": "mongodb+srv://Vova:D7vIfrpCCLDQqkCs@cluster0.xmmlkma.mongodb.net/?retryWrites=true&w=majority"
   }
