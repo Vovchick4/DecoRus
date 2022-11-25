@@ -3,7 +3,7 @@
     "PORT": 4000,
     "NODE_ENV": "development",
     "BASE_URL": "http://localhost:4000",
-    "MONGO_URL": "mongodb://127.0.0.1:27017/",
+    "MONGO_URL": "mongodb://127.0.0.1:27017/decorus-db",
     "MONGO_DB": "decorus-db",
     "ACCESS_TOKEN": "jsjgosfdjogioaqOSSAJohhohdgdoghoo",
     "ACCESS_TOKEN_EXPIRES": 604800,
@@ -14,6 +14,8 @@
   "production": {
     "NODE_ENV": "production",
     "NODE_OPTIONS": "--http-parser=legacy",
-    "BASE_URL": "http://aed-map.pp.ua"
+    "BASE_URL": "http://aed-map.pp.ua",
+    "MONGO_DB": "decorusdb",
+    "MONGO_URL": "mongodb+srv://Vova:D7vIfrpCCLDQqkCs@cluster0.xmmlkma.mongodb.net/?retryWrites=true&w=majority"
   }
 }
