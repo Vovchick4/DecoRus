@@ -2,7 +2,7 @@
   "development": {
     "PORT": 8080,
     "NODE_ENV": "development",
-    "BASE_URL": "http://localhost:4000",
+    "BASE_URL": "http://localhost:8080",
     "MONGO_URL": "mongodb://127.0.0.1:27017/decorus-db",
     "MONGO_DB": "decorus-db",
     "ACCESS_TOKEN": "jsjgosfdjogioaqOSSAJohhohdgdoghoo",

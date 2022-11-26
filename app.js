@@ -39,6 +39,7 @@ i18next.use(i18nextMiddleware.LanguageDetector).use(Backend).init({
 });
 
 function bootstrap() {
+    console.log(__dirname);
     app.set('views', path.join(__dirname, 'views'));
     app.set("view engine", "ejs")
     app.use(partials())
