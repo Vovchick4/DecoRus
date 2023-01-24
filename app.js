@@ -63,4 +63,5 @@ function bootstrap() {
     })
 }
 
-database(bootstrap)
+// database(bootstrap)
+bootstrap()
