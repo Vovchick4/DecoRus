@@ -4,8 +4,8 @@ import * as collController from "../collection/controller.js"
 import routes from "../../../shared/config/routes.js"
 
 export const getHomePage = async (req, res) => {
-    const response = await fetch(`${process.env.BASE_URL}/api/collections`)
-    const { collections } = await response.json()
+    // const response = await fetch(`${process.env.BASE_URL}/api/collections`)
+    // const { collections } = await response.json()
 
     const { lang } = req.cookies
     const tempLng = req.query?.lng
@@ -16,7 +16,7 @@ export const getHomePage = async (req, res) => {
         activeLng: req.lng,
         full_url: req.url_lang,
         base_url: process.env.BASE_URL,
-        ourLatestWork: collections
+        ourLatestWork: []
     })
 }
 
