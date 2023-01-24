@@ -6,7 +6,7 @@ import partials from "express-partials"
 import Backend from "i18next-node-fs-backend"
 import i18nextMiddleware from "i18next-http-middleware"
 
-import database from "./db/index.js"
+// import database from "./db/index.js"
 
 import API from "./api/index.js"
 import { fileURLToPath } from 'url'
@@ -20,7 +20,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 const app = express()
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 3000
 
 i18next.use(i18nextMiddleware.LanguageDetector).use(Backend).init({
     backend: {
