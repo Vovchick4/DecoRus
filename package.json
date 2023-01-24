@@ -5,7 +5,7 @@
   "description": "Decorus closesS",
   "main": "app.js",
   "scripts": {
-    "start": "env-cmd -e development,production -r ./envs/cmrdc.json nodemon -e * start",
+    "start": "env-cmd -e development,production -r ./envs/cmrdc.json nodemon app.js",
     "start:dev": "env-cmd -e development -r ./envs/cmrdc.json nodemon -e * start"
   },
   "author": "Vova",
