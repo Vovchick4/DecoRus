@@ -2,7 +2,7 @@
   "development": {
     "PORT": 3000,
     "NODE_ENV": "development",
-    "BASE_URL": "http://localhost:8080",
+    "BASE_URL": "http://localhost:3000",
     "MONGO_URL": "mongodb://127.0.0.1:27017/decorus-db",
     "MONGO_DB": "decorus-db",
     "ACCESS_TOKEN": "jsjgosfdjogioaqOSSAJohhohdgdoghoo",
@@ -14,7 +14,7 @@
   "production": {
     "NODE_ENV": "production",
     "NODE_OPTIONS": "--http-parser=legacy",
-    "BASE_URL": "http://localhost:8080",
+    "BASE_URL": "http://localhost:3000",
     "MONGO_DB": "decorusdb",
     "MONGO_URL": "mongodb+srv://Vova:D7vIfrpCCLDQqkCs@cluster0.xmmlkma.mongodb.net/?retryWrites=true&w=majority"
   }
