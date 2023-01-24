@@ -7,17 +7,18 @@ export const getHomePage = async (req, res) => {
     // const response = await fetch(`${process.env.BASE_URL}/api/collections`)
     // const { collections } = await response.json()
 
-    const { lang } = req.cookies
-    const tempLng = req.query?.lng
-    req.i18n.changeLanguage(!tempLng ? lang || "ua" : tempLng)
-    res.render('pages/home', {
-        routes: routes.client,
-        pageId: req.url.split("?")[0],
-        activeLng: req.lng,
-        full_url: req.url_lang,
-        base_url: process.env.BASE_URL,
-        ourLatestWork: []
-    })
+    // const { lang } = req.cookies
+    // const tempLng = req.query?.lng
+    // req.i18n.changeLanguage(!tempLng ? lang || "ua" : tempLng)
+    // res.render('pages/home', {
+    //     routes: routes.client,
+    //     pageId: req.url.split("?")[0],
+    //     activeLng: req.lng,
+    //     full_url: req.url_lang,
+    //     base_url: process.env.BASE_URL,
+    //     ourLatestWork: []
+    // })
+    res.json({ data: "fdaf" })
 }
 
 export const getContactPage = (req, res) => {

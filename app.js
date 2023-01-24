@@ -39,17 +39,17 @@ i18next.use(i18nextMiddleware.LanguageDetector).use(Backend).init({
 });
 
 function bootstrap() {
-    console.log(__dirname);
-    app.set('views', path.join(__dirname, 'views'));
-    app.set("view engine", "ejs")
+    // console.log(__dirname);
+    // app.set('views', path.join(__dirname, 'views'));
+    // app.set("view engine", "ejs")
     app.use(partials())
     // Passport INIT
     app.use(passport.initialize())
     myPassportStrategy(passport)
     // save user in req
-    app.use(setUserToReq)
+    // app.use(setUserToReq)
 
-    filesRoutes(app, express, __dirname)
+    // filesRoutes(app, express, __dirname)
 
     middlewares(app, express, __dirname)
 
